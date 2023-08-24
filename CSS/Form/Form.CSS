@@ -1,0 +1,43 @@
+/* Center align probably all the components */
+/* Grouping of selectors */
+head, body, form, p {
+    text-align: center;
+}
+
+/* Add background image */
+body {
+    background-image:url('image1.jpg');
+    background-size:cover; /* Adjust as needed */
+    background-repeat:no-repeat;
+}
+
+input {
+    padding: 12px 20px;
+    margin: 8px ;
+    box-sizing: border-box; 
+}
+#fname, #lname, #email, #cont{
+    width: 70%;
+    display: inline-block; 
+}
+#dob, #age, #gen {
+    width: 20%;
+}
+
+/* increase the font size of text */
+h1 {
+    font-size: 40px;
+}
+label{
+    font-size: 25px;
+    display: inline-block
+}
+form {
+    border: 2px solid #ccc; /* Border style */
+    padding: 20px; /* Space between the content and the border */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    width: 600px; /* Adjust the width as needed */
+    margin: 0 auto; /* Center the box horizontally */
+  }
+
