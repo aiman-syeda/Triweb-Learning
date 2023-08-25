@@ -1,0 +1,26 @@
+table {
+    border-collapse: collapse;
+    width: 50%;
+    margin: 0 auto;   
+}
+
+table td, table th{
+    width: auto;
+    padding: 5px;
+}
+
+.container{
+    text-align: center;
+    background-image: url('image1.jpg'); 
+    background-size: cover; /* This property ensures the image covers the entire container */
+    background-position: center; /* This property centers the image within the container */
+    text-align: center; /* Center other content vertically */
+    padding: 50px; 
+}
+
+table td{
+    background-color: bisque;
+}
+table th{
+    background-color: whitesmoke;
+}
