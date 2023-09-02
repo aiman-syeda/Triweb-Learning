@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Demo</title>
+    </head>
+    <body>
+        <h1>Not gate</h1>
+        <h2>0</h2>
+        <button>toggle</button>
+
+        <script>
+            var h1tag = document.querySelector('h1');
+            var h2tag = document.querySelector('h2');
+            var buttontag = document.querySelector('button');
+            buttontag.onclick = function(){
+                var content = h2tag.textContent;
+                 if (content == '0'){
+                    h2tag.textContent = '1';
+                 } 
+                 else {
+                    h2tag.textContent = '0';
+                 }
+            }
+        </script>
+
+    </body>
+
+
+</html>
