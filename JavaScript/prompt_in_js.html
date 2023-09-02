@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Prompt</title>
+    </head>
+    <body>
+        <h1>Hello</h1>
+        <script>
+            h1Tag = document.querySelector('h1');
+            htmlTag = document.querySelector('html');
+            var name = prompt('Enter your name:')
+            htmlTag.onclick = function(){
+                h1Tag.textContent = 'Hello ' + name;
+            }
+        </script>
+    </body>
+</html>
