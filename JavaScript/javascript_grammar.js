@@ -23,6 +23,7 @@ console.log('x =  '+x,'_name =  '+_name,'$currency =  ' +$currency);
 /* 1.The var statement declares function-scoped or globally-scoped variables, 
 optionally initializing each to a value.*/
 console.log('1.For "var" type')
+console.log('I am called before i am initialized: ' +a);
 var a = 10;
 console.log('I am called before if block ' +a);
 if (a === 10) {
@@ -47,6 +48,7 @@ console.log('2.For "let" type')
  but if a constant is an object, its properties can be added, updated, or removed.*/
 
  console.log('For "const" type')
+ console.log(c); //Throws an error because it has no global scope
  const c = 34;
  try{
     c = 56;
