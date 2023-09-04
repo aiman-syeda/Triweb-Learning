@@ -1,0 +1,21 @@
+<!How javascript can be used to make changes on some event>
+
+<html>
+    <head>
+        <title>Image Changer</title>
+    </head>
+    <body>
+        <img src = 'flipkart1.png'>
+        <script>
+            let ImgTag = document.querySelector('img');
+            ImgTag.onclick = function() {
+             let source = ImgTag.getAttribute('src');
+             if (source == 'flipkart1.png') {
+                 ImgTag.setAttribute('src', 'flipkart2.png');
+             } else {
+                ImgTag.setAttribute('src', 'flipkart1.png');
+             }
+            }
+         </script>
+    </body>
+</html>
