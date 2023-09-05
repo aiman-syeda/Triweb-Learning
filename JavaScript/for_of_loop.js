@@ -13,3 +13,10 @@ str = 'My name';
 for (const x of str){
     console.log(x);
 }
+
+console.log('iterate through an array using foreach loop');
+arr1 = [2,4,6,8,10];
+arr1.forEach((element) => {
+    console.log(element);
+    
+});
