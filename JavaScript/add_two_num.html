@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Addition</title>
+    </head>
+    <body>
+        <h1>Addition</h1>
+        <input type="text" id="num1" >
+        <input type="text" id="num2" >
+        <button>Add</button>
+
+        <script>
+            function addnums(num1,num2){
+                console.log(num1+num2);
+            }
+            function addEvent(){
+                h1tag = document.querySelector('h1');
+                let inp1tag = parseInt(document.getElementById('num1').value);
+                let inp2tag = parseInt(document.getElementById('num2').value);
+                addnums(inp1tag,inp2tag);
+            }
+            let btntag = document.querySelector('button');
+            btntag.addEventListener('click',addEvent);    //if give function call with braces then the function will be called immediately
+            
+            
+            
+            
+        </script>
+    </body>
+</html>
