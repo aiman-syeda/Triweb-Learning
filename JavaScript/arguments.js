@@ -15,7 +15,7 @@ console.log(result);
 
 //How to convert arguments to array?
 
-function Multiplication(){
+function Product(){
     let product = 1;
     arr = Array.from(arguments);    //to covert arguments into array 
     arr.forEach(element => {
@@ -24,7 +24,20 @@ function Multiplication(){
     return product;
 
 }
-let result1 = Multiplication(2,3);
+let result1 = Product(2,3);
 console.log(result1);
+
+
+// Rest parameters
+
+function Multiplication(multiplier,...arg){
+    let result3;
+    arg.forEach(elem=> {
+        result3 = multiplier*elem;
+        console.log(result3);
+    });
+}
+
+Multiplication(2,1,2,3,4);
 
 
