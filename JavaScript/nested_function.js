@@ -1,11 +1,19 @@
 /* Functions can be nested as many as we need but */
 
+
+// inner function preserves the scope of the outer function 
+
 function add(num1,num2){
-    function getsum(num1,num2){
+    function getsum(){
         let sum = num1 + num2;
-        console.log(sum);
+       // console.log(sum);
+       return sum;
+
     } 
-    getsum(num1,num2);
+    let result = getsum();    //even if we do not pass arguments it can fetch the result
+    return result;
+
 }
 
-add(1,2);
+let addition_result = add(13,2);
+console.log(addition_result);
