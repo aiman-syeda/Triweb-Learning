@@ -12,3 +12,19 @@ function Addition(){
 }
 let result = Addition(2,1,3,4,5,7,8,9,10,6);
 console.log(result);
+
+//How to convert arguments to array?
+
+function Multiplication(){
+    let product = 1;
+    arr = Array.from(arguments);    //to covert arguments into array 
+    arr.forEach(element => {
+        product = element * product;
+    });
+    return product;
+
+}
+let result1 = Multiplication(2,3);
+console.log(result1);
+
+
