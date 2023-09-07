@@ -23,7 +23,7 @@ console.log('x =  '+x,'_name =  '+_name,'$currency =  ' +$currency);
 /* 1.The var statement declares function-scoped or globally-scoped variables, 
 optionally initializing each to a value.*/
 console.log('1.For "var" type')
-console.log('I am called before i am initialized: ' +a);
+console.log('I am called before i am initialized: ' +a);    // Says a is undefined but not error msg
 var a = 10;
 console.log('I am called before if block ' +a);
 if (a === 10) {
