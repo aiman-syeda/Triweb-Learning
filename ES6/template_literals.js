@@ -17,3 +17,13 @@ function xyz(str1,uname,age){
     console.log(age);
 }
 xyz`My name is ${sname} and I am ${age} years old `;
+
+
+
+let strng = `I am \n ${34}`;
+console.log(strng == "I am \n 34");  //returns true
+console.log(strng == "I am \\n 34");  //return false
+
+//Raw template literals
+
+console.log(String.raw`I am \n ${34}` == "I am \\n 34");  //returns true
