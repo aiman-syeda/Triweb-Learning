@@ -7,3 +7,16 @@ console.log('a=',a,'b=',b);
 [a,b] = [b,a];
 console.log('a=',a,'b=',b);
 console.log(arr);
+
+//Shorthand notation, Object matching
+
+function getstd(){
+    let std = {
+        uname:'Akshay',
+        age:35
+    }
+    return std;
+}
+var {uname,age} = getstd();
+console.log(uname,age); 
+
