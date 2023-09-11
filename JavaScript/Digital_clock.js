@@ -1,4 +1,4 @@
-function getDigitalTime(){
+(function getDigitalTime(){
     let dt = new Date();
     let hours = dt.getHours();
     let minutes = dt.getMinutes();
@@ -14,5 +14,4 @@ function getDigitalTime(){
     time += seconds<10?":0"+seconds:":"+seconds;
     time += hours>12? " PM" : " AM";
     console.log(time);
-}
-getDigitalTime();
+})()
