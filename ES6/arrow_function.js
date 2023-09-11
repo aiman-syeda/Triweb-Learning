@@ -25,3 +25,9 @@ let obj = (student_name,age) => {
     return {name:student_name,Age:age};
 }
 console.log(obj('Akshay',23));
+
+// Arrow function with statement bodies
+
+arr.forEach((elem)=> {
+    console.log(elem);
+})
