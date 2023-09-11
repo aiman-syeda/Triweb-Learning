@@ -20,3 +20,18 @@ function getstd(){
 var {uname,age} = getstd();
 console.log(uname,age); 
 
+//Object matching ,deep matchin
+
+function getinfo(){
+    let emp ={
+        ename:'Ajay',
+        income:120000,
+        place :{
+            city:'Raichur',
+            code: 584101
+        }
+    }
+    return emp;
+}
+var {ename:employee,income:employeesalary,place:{city:cityname,code:pincode}} = getinfo();
+console.log(employee,employeesalary,cityname,pincode);
