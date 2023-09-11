@@ -8,3 +8,12 @@ console.log('Using template literals')
 //Template Literals
 console.log(`${str} ${sname} and
 I am ${age} years old `);
+
+//custom interpolation
+console.log('custom interpolation')
+function xyz(str1,uname,age){
+    console.log(str1);
+    console.log(uname);
+    console.log(age);
+}
+xyz`My name is ${sname} and I am ${age} years old `;
