@@ -7,8 +7,10 @@
 {
     var x = 4;
     let y = 3;
+    const z = 34;
 }
 console.log(x);
 console.log(y);  //Throws reference error beacuase 
 //the scope of let variable lies within the bracec
+console.log(z);  //Throws reference error beacuase 
 
