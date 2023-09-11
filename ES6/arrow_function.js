@@ -12,3 +12,16 @@ const xyz = () =>{
     console.log('xyz',this);
 }
 xyz();
+
+//Arror functions can be used in assignment expressions
+
+let arr = [2,4,6,5,7,8,12];
+let sqare = arr.map(ele => ele*ele);
+console.log(sqare);
+
+//Return an object using arrow function
+
+let obj = (student_name,age) => {
+    return {name:student_name,Age:age};
+}
+console.log(obj('Akshay',23));
