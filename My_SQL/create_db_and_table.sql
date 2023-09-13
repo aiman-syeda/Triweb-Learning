@@ -18,3 +18,17 @@ UPDATE User_data SET Remark='done' WHERE Remark='pending';
 
 ALTER TABLE User_Data 
 ADD Created_on TIMESTAMP DEFAULT CURRENT_TIMESTAMP;
+
+CREATE TABLE Course(Std_name VARCHAR(255) NOT NULL, 
+                   Course_name VARCHAR(255) NOT NULL,
+                   status VARCHAR(25) NOT NULL);
+INSERT INTO Course(Std_name,Course_name,status) 
+ VALUES ('Akshay','my_sql','pending'),
+        ('Akshay', 'Python', 'done'),
+         ('Amit', 'my_sql', 'done'),
+         ('Sanjay', 'Python', 'pending'),
+         ('Akshay', 'Java', 'not started'),
+          ('Sanjay', 'my_sql', 'done'),
+          ('Amit', 'Python', 'pending'),
+          ('Amit', 'Java', 'done'),
+          ('Sanjay', 'Java', 'not started');
