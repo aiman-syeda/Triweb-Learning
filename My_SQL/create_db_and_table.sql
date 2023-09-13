@@ -15,3 +15,6 @@ VALUES ('Amit','amit@gmail.com','123456','done');
 SELECT * FROM User_data;
 
 UPDATE User_data SET Remark='done' WHERE Remark='pending';
+
+ALTER TABLE User_Data 
+ADD Created_on TIMESTAMP DEFAULT CURRENT_TIMESTAMP;
