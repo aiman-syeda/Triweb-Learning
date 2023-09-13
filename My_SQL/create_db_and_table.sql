@@ -1,3 +1,6 @@
 CREATE DATABASE Raw_data;
 USE Raw_data;
 CREATE TABLE `Raw_data`.`User_Data`
+CREATE TABLE `Raw_data`.`User_Data` (`Id` INT NOT NULL AUTO_INCREMENT ,
+`User_Name` VARCHAR(255) NOT NULL , `Email` VARCHAR(255) NOT NULL , 
+`Password` VARCHAR(255) NOT NULL , `Remark` VARCHAR(255) NOT NULL , PRIMARY KEY (`Id`))
