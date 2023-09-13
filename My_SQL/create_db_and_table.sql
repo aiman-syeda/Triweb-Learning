@@ -13,3 +13,5 @@ INSERT INTO User_data (User_name,Email,Password,Remark)
 VALUES ('Amit','amit@gmail.com','123456','done');
 
 SELECT * FROM User_data;
+
+UPDATE User_data SET Remark='done' WHERE Remark='pending';
