@@ -11,3 +11,5 @@ INSERT INTO User_Data (`Id`, `User_Name`, `Email`, `Password`, `Remark`)
 
 INSERT INTO User_data (User_name,Email,Password,Remark) 
 VALUES ('Amit','amit@gmail.com','123456','done');
+
+SELECT * FROM User_data;
