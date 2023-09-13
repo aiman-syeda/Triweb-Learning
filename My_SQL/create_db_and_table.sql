@@ -32,3 +32,10 @@ INSERT INTO Course(Std_name,Course_name,status)
           ('Amit', 'Python', 'pending'),
           ('Amit', 'Java', 'done'),
           ('Sanjay', 'Java', 'not started');
+
+
+SELECT c.Std_name,c.Course_name,c.Status,u.User_name 
+FROM User_Data u
+INNER JOIN Course c 
+ON c.Std_name = u.User_name; 
+
