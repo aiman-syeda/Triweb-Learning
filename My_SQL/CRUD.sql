@@ -25,3 +25,6 @@ CHANGE mobile std_mobile VARCHAR(30) NOT NULL;
 
 ALTER table students
 ADD COLUMN class_id INT(30) NOT NULL;
+
+ALTER table students
+ADD FOREIGN KEY (class_id) REFERENCES classes(id);
