@@ -47,3 +47,12 @@ VALUES (1, 1, 1, '2021-01-01'),
 (19, 7, 1, '2023-02-10'),
 (20, 4, 4, '2023-03-01');
 
+-- PERSON WHO SOLD MOST OF THE CARS IN THE YEAR 2023
+SELECT sp.name,sp.city,count(s.salesman_id) AS cars_sold
+FROM sales s
+JOIN salespersons sp
+ON s.salesman_id=sp.salesman_id
+WHERE YEAR(s.purchase_date) = '2023'
+GROUP BY s.salesman_id, sp.name
+ORDER BY cars_sold desc
+LIMIT 1;
