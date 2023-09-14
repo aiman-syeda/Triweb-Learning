@@ -20,5 +20,8 @@ student_name VARCHAR(255) NOT NULL,
 class INT(11) DEFAULT 5,
 mobile INT(15) NOT NULL)
 
-ALTER table Students
-CHANGE mobile VARCHAR(30) NOT null;
+ALTER TABLE Students
+CHANGE mobile std_mobile VARCHAR(30) NOT NULL;
+
+ALTER table students
+ADD COLUMN class_id INT(30) NOT NULL;
