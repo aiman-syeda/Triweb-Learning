@@ -42,3 +42,10 @@ INSERT into students(id,student_name,std_mobile,class,class_id)
 SELECT * FROM Students;
 SELECT * FROM classes;
 SELECT * FROM teachers;
+
+SELECT id,student_name,class_id FROM Students
+WHERE student_name='Akshay';
+SELECT mobile FROM teachers
+WHERE teacher_name='Razaq';
+SELECT class_name FROM classes
+WHERE teacher_id=3;
