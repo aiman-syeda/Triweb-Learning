@@ -14,3 +14,11 @@ PRIMARY KEY(id),
 FOREIGN KEY(teacher_id) REFERENCES teacher(id)   
 )  
 
+CREATE TABLE Students (
+id INT(11) NOT NULL AUTO_INCREMENT ,PRIMARY KEY(id),
+student_name VARCHAR(255) NOT NULL,
+class INT(11) DEFAULT 5,
+mobile INT(15) NOT NULL)
+
+ALTER table Students
+CHANGE mobile VARCHAR(30) NOT null;
