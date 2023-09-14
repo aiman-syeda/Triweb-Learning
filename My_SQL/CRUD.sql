@@ -54,3 +54,10 @@ SELECT c.teacher_id,s.student_name,s.std_mobile
 FROM classes c
 JOIN students s
 ON s.class_id=c.id;
+
+
+SELECT c.teacher_id,t.teacher_name,t.mobile,COUNT(t.id) AS t_count
+FROM teachers t
+JOIN classes c
+ON c.teacher_id=t.id
+GROUP BY t.id;
