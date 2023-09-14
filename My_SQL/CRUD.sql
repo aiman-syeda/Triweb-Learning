@@ -61,3 +61,7 @@ FROM teachers t
 JOIN classes c
 ON c.teacher_id=t.id
 GROUP BY t.id;
+
+SELECT student_name FROM students 
+UNION
+SELECT teacher_name FROM teachers ;
