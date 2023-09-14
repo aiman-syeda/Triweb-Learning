@@ -49,3 +49,8 @@ SELECT mobile FROM teachers
 WHERE teacher_name='Razaq';
 SELECT class_name FROM classes
 WHERE teacher_id=3;
+
+SELECT c.teacher_id,s.student_name,s.std_mobile
+FROM classes c
+JOIN students s
+ON s.class_id=c.id;
