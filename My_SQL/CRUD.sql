@@ -39,4 +39,6 @@ INSERT INTO classes(class_name,teacher_id)
 INSERT into students(id,student_name,std_mobile,class,class_id) 
  VALUES(1,'Akshay','1122',4,2),(2,'Amit','114253',3,1),(3,'Ajay','11425333',7,2);
 
-
+SELECT * FROM Students;
+SELECT * FROM classes;
+SELECT * FROM teachers;
