@@ -12,4 +12,12 @@ app.get('/',(req,res)=>{
     res.send('Hello World');
 })
 
+app.get('/add',(req,res)=>{
+    let sum;
+    let n1 = 23;
+    let n2 = 7;
+    sum = n1 + n2;
+    res.send(`Sum = ${sum}`);
+});
+
 app.listen(3000);  //declare port on which u want to run the code
