@@ -1,11 +1,14 @@
-const userModel = require('/Users/syeda/Documents/Aiman Syeda/Node JS app_2/models/user.js')
+const userModel = require('/Users/syeda/Documents/Aiman Syeda/BasicProjectNodeJS/models/user.js')
 
 
 //Registration
 module.exports.register = async (req,res) =>{
-    let response = await userModel.insert(req.body)
-    console.log(response);
-    res.send(req.body);
+    let insertedId = await userModel.insert(req.body)
+    if (insertedId > 0){
+        res.send({status:'Success',data:{id:insertedId}});
+    }else{
+        res.send({status:'error',message:'User Registration failed'});
+    }
 };
 
 //get data
