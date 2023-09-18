@@ -23,9 +23,16 @@ module.exports.get = async (req,res) =>{
 };
 
 
+
+
 //Update data
-module.exports.update = (req,res) =>{
-    res.send(req.body);
+module.exports.update = async (req,res) =>{
+    let status = await userModel.update(req.body);
+    if (status) {
+        res.send({status:'Success',message:"User Data updated"});
+    }else{
+        res.send({status:'error',message:'User Data not updated'});
+    }
 };
 
 
