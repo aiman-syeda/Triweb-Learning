@@ -24,7 +24,6 @@ module.exports.get = async (req,res) =>{
 
 
 
-
 //Update data
 module.exports.update = async (req,res) =>{
     let status = await userModel.update(req.body);
@@ -36,7 +35,12 @@ module.exports.update = async (req,res) =>{
 };
 
 
-//delete data
-module.exports.delete = (req,res) =>{
-    res.send(req.body);
+//Delete data
+module.exports.delete = async (req,res) =>{
+    let status = await userModel.delete(req.body);
+    if (status) {
+        res.send({status:'Success',message:"User data deleted"});
+    }else{
+        res.send({status:'error',message:'User data not deleted'});
+    }
 };
