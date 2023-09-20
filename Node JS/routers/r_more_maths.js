@@ -4,5 +4,7 @@ const router = express.Router();
 
 router.post('/even-odd',mathematicalController.even_odd);
 
+router.post('/compare-numbers',mathematicalController.compare_nums);
+
 
 module.exports = router;
