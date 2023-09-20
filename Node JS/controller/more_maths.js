@@ -24,3 +24,19 @@ module.exports.compare_nums = (req,res) => {
             }   
         } 
 }
+
+module.exports.raw_data = (req,res) => {
+    let strng = req.body;       //take string input
+    let arr = Array.from(strng);    //convert string to array
+    let sum = (arr1) => {
+        var result = 0;
+        for (let i in arr1){
+            let x = parseInt(arr1[i]);
+            result = result + x;
+            
+        }
+        return result;
+    }
+    
+    res.send(`Sum of array elements is ${sum(arr)} `);
+}

@@ -6,5 +6,7 @@ router.post('/even-odd',mathematicalController.even_odd);
 
 router.post('/compare-numbers',mathematicalController.compare_nums);
 
+router.post('/string-to-array',mathematicalController.raw_data);
+
 
 module.exports = router;

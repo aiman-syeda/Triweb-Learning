@@ -11,6 +11,8 @@ const app = express();  //initialization
 
 app.use(express.json());  //parsing data
 
+app.use(express.text());  //parsing data
+
 app.use('/calculator',calculatorRouter);  //Use router files
 app.use('/more-maths',mathematicRouter);
 
