@@ -6,7 +6,7 @@
 
 const express = require('express');  //import express
 const calculatorRouter = require("/Users/syeda/Documents/projects/Triweb-Learning/Node JS/routers/r_calculator");
-const mathematicRouter = require("/Users/syeda/Documents/projects/Triweb-Learning/Node JS/Simple_Project/routers/router.js")
+const mathematicRouter = require("//Users/syeda/Documents/projects/Triweb-Learning/Node JS/routers/r_more_maths.js")
 const app = express();  //initialization
 
 app.use(express.json());  //parsing data
