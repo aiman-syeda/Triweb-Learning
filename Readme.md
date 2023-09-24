@@ -5,8 +5,7 @@
 
 Welcome to my GitHub repository! This repository is a treasure trove of fundamental programming concepts and simple projects implemented various coding languages. Whether you're a beginner looking to learn or an experienced coder seeking inspiration, you'll find a wide array of content to explore.
 
-![alt text](https://api.asm.skype.com/v1/objects/0-sa-d6-338a6018f7ac8db46229d8726c08e726/views/imgpsh_fullsize_anim)
-
+![alt text](/Users/syeda/Documents/projects/Triweb-Learning/reaadme_triweb.jpeg)
 ## Contents
 
 - **Python:** Explore Python programming concepts and code snippets to sharpen your Python skills.
