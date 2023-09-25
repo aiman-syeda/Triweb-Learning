@@ -65,3 +65,11 @@ GROUP BY t.id;
 SELECT student_name FROM students 
 UNION
 SELECT teacher_name FROM teachers ;
+
+
+SELECT c.teacher_id,t.teacher_name,t.mobile,Avg(t.id) AS t_count
+FROM teachers t
+JOIN classes c
+ON c.teacher_id=t.id
+GROUP BY t.id
+Order BY t.id;
