@@ -1,8 +1,8 @@
-const express = require('express');
-const userRoute = require('/Users/syeda/Documents/Aiman Syeda/Node JS app_2/routers/user.js')
-const app = express();
+const express = require('express');  //import express framework
+const userRoute = require('/Users/syeda/Documents/Aiman Syeda/BasicProjectNodeJS/routers/user.js')  //add routers path
+const app = express();  //Create express app
 
 
-app.use(express.json());
+app.use(express.json());    //parse data
 app.use('/user',userRoute);
-app.listen(3000);
+app.listen(3000);   //declare port 
