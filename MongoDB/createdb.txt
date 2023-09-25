@@ -19,7 +19,7 @@ const col = db.collection("people")
 // Insert the document into the specified collection        
          const p = col.insertOne(personDocument);
 
-// Find and return the document
+// Find and return the document-Retrieve data
          const filter = { "name.last": "Turing" };
          const document = await col.findOne(filter);
          console.log("Document found:\n" + JSON.stringify(document));
