@@ -5,7 +5,7 @@
 
 Welcome to my GitHub repository! This repository is a treasure trove of fundamental programming concepts and simple projects implemented various coding languages. Whether you're a beginner looking to learn or an experienced coder seeking inspiration, you'll find a wide array of content to explore.
 
-![alt text](readme_triweb.jpeg)
+<img src="readme_triweb.jpeg" width="600" style="align:center" />
 
 ## How to Use This Repository
 
@@ -25,14 +25,5 @@ Feel free to navigate through the folders and files within this repository to ac
  - [**Node JS:**](https://github.com/aiman-syeda/Triweb-Learning/tree/main/Node%20JS)Get started with express framework to create a simple app,You will find here simple calculator app which takes input in JSON format , performs addition,subtraction,multiplication or division as per the urls hitted and gives you the result. 
  - [**BasicProjectNodeJS:**](https://github.com/aiman-syeda/Triweb-Learning/tree/main/BasicProjectNodeJS)In this folder, you'll discover a straightforward application designed to perform common user operations: creating,retrieving, updating, and deleting users. This app consists of a router file, a controller file, and an index file. It also demonstrates how to connect your data model to a PHPMyAdmin database using SQL and Sequelize. Whether you're new to Node.js or looking to understand how to integrate your application with a SQL database, this section provides a clear and practical example of how it all comes together.
 
- ## Overview
 
- - [HTML](https://github.com/aiman-syeda/Triweb-Learning/tree/main/HTML/Form)
-
-
-
-### [Form.html](https://github.com/aiman-syeda/Triweb-Learning/blob/main/HTML/Form/Form.html)
-Inside the HTML folder find a folder named Forms and there you will see [Form.html](https://github.com/aiman-syeda/Triweb-Learning/blob/main/HTML/Form/Form.html).It's a simple Registration Form designed using form elements without CSS. 
-
-![Registration Form](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
 
