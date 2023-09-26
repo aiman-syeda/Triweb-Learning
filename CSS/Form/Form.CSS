@@ -13,33 +13,35 @@ body {
 
 input {
     display: inline-block; 
-    padding: 10px 100px;
+    padding: 8px 30px;
     margin: 5px ;
     box-sizing: border-box; 
     font-size: 20px;
 }
 #fname, #lname, #email, #cont,#dob, #age, #gen,#pswd, #rf{
     width: 40%;
-    padding: 10px; ;
+    padding: 1px; 
+    height: 25px;
 }
 
 /* increase the font size of text */
 h1 {
-    font-size: 40px;
+    font-size: 25px;
 }
 label{
-    font-size: 30px;
+    font-size: 20px;
     display: inline-block;
-    width: 200px;
+    width: 100px;
     text-align:left; 
 }
 form {
     border: 2px solid #ccc; /* Border style */
-    padding: 10px; /* Space between the content and the border */
-    border-radius: 10px; /* Rounded corners */
+    padding: 3px; /* Space between the content and the border */
+    border-radius: 40px; /* Rounded corners */
     box-shadow: 12 6 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
     width: 40%; /* Adjust the width as needed */
     margin: 0 auto; /* Center the box horizontally */
+
   }
   
 .texts, .form_class {
