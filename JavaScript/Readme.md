@@ -21,8 +21,12 @@ This is the code snippet which is responsible to toggle your image on click even
 `ImgTag.setAttribute('src', 'flipkart2.png');`
 
 This is how it looks like..
+
+
 <img width="500" alt="Screenshot 2023-09-26 at 15 54 51" src="https://github.com/aiman-syeda/Triweb-Learning/assets/137302844/33141fd3-2c07-424b-85bb-7768ec12963f">
 And when you click on the image you will get this.
+
+
 <img width="500" alt="Screenshot 2023-09-26 at 15 55 00" src="https://github.com/aiman-syeda/Triweb-Learning/assets/137302844/ca0dc2bf-0c7b-4fd1-8180-82b766c2fd57">
 
 Whether you're new to JavaScript or looking to build interactive elements for your web projects, this folder offers a blend of foundational knowledge and hands-on experience to ignite your JavaScript journey.
