@@ -30,24 +30,27 @@ This is a simple application's backend where a user can be added, it's credentia
 
 ## Here are the screenshots from Postman. 
 
+Register User
 
 <p align="center">
-Register User
 <img width="500" alt="Screenshot 2023-09-28 at 10 03 07" src="https://github.com/aiman-syeda/Triweb-Learning/assets/137302844/7cf817aa-5070-4bce-988e-e3f3c7cf2114">
 </p>
 
-<p align="center">
 Get user deatils
+
+<p align="center">
 <img width="500" alt="Screenshot 2023-09-28 at 10 03 31" src="https://github.com/aiman-syeda/Triweb-Learning/assets/137302844/a8c015b8-590d-41e0-9e26-f181673868e4">
 </p>
 
-<p align="center">
 Update user data password is updated here
+
+<p align="center">
 <img width="500" alt="Screenshot 2023-09-28 at 10 04 08" src="https://github.com/aiman-syeda/Triweb-Learning/assets/137302844/f72af11d-ef28-4d54-a297-d25a1ca0c3bd">
 </p>
 
+Delete user
+
 <p align="center">
-Delete user.
 <img width="500" alt="Screenshot 2023-09-28 at 10 05 13" src="https://github.com/aiman-syeda/Triweb-Learning/assets/137302844/5ab0255d-0ada-4d21-afc6-7b67594da130">
 </p>
 
