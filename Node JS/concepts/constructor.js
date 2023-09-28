@@ -16,6 +16,8 @@ console.log(car1.make);
 console.log(car1.model);
 console.log(car1.year);
 console.log(car2.year);
+console.log(car2);
+
 
 
 
