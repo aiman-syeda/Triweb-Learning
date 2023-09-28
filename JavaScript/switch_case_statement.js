@@ -19,6 +19,9 @@ switch(days){
     case 7:
         console.log('Saturday');
         break;
+    default:
+        break;
+        
     
 }
 let weekdays=3
@@ -33,5 +36,8 @@ switch(weekdays){
     case 6:
     case 7:
         console.log("Hurray it's a holiday");
+        break;
+    default:
+        console.log('Enter number between 0 and 8);
         break;
 }
