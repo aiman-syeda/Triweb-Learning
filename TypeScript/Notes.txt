@@ -1,0 +1,40 @@
+Convert a javascript project to typescript.
+
+First create a project in javascript following  steps below:  
+1.yarn init
+2.create app.js
+3.yarn add express
+4.yarn add --dev nodemon
+5.Add this to your package.json file ' "scripts": {
+    "start": "node app.js",
+    "start:dev": "nodemon app.js" } '
+6.Create multilayer structure
+7.Run the code using yarn start:dev.
+
+
+For Transpilation(compile a code from one language to another coding language)
+1.--yarn add typescript
+2.--tsc for transpilation
+3.--tsc --init will generate a tconfig.json file
+4.Create source file and move your layers here.
+5.change files extension from .js to .ts
+6.install definitions for typescript
+   --yarn add --dev @types/node
+7.Typescript doesn't support redeclare packages
+8.(make changes in tsconfig.json file according to your needs).
+* module resolution
+* resolvejsonmodule
+* outDir: "/dist"
+* allowSyntheticDefaultImports:true
+* strict:true
+* noImplicitAny
+* add app.js path to package.json 
+9.You will find some errors after transpilation simply try to solve them.
+
+
+If you encouter an error saying zsh:tsc command not found then run the command below.
+--export PATH="$PATH:/Users/xxx/yyy/zzz/Triweb-Learning/TypeScript/node_modules/typescript/bin"
+
+
+
+
