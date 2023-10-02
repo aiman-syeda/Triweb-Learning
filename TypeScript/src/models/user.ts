@@ -5,4 +5,16 @@ const addUserToDB = (userName:string, password:string) => {
     return "Registeration done";
 };
 
-export  {addUserToDB};
+interface User {
+    id:number,
+    user_name:string,
+    email:string,
+    password:string
+};
+
+const updateUserData = (objUser:User) => {
+
+    console.log(objUser.user_name);
+    return "Done";
+}
+export  {addUserToDB,updateUserData};
