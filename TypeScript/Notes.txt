@@ -36,5 +36,20 @@ If you encouter an error saying zsh:tsc command not found then run the command b
 --export PATH="$PATH:/Users/xxx/yyy/zzz/Triweb-Learning/TypeScript/node_modules/typescript/bin"
 
 
+ interface: 
+ union type :
+ readonly:
+
+Difference between interface, class
+
+Interface: 
+ -Can't be initialized
+ - public
+ -redeclaration is allowed
+
+ class 
+ - can be used to create new objects
+ - public and private protected
 
 
+ --"build":tsc --noEmitOnError

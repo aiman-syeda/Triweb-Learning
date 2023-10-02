@@ -1,8 +1,11 @@
 const express = require('express');
 //const userController = require('../controller/user');
-import {registerUser} from '../controller/user' ;
+import {registerUser,updateUser} from '../controller/user' ;
 const router = express.Router();
 
 router.use('/register', registerUser);
+
+router.use('/update', updateUser);
+
 
 export default router;
