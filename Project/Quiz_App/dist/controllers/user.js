@@ -58,11 +58,13 @@ const updateUser = (req, res) => __awaiter(void 0, void 0, void 0, function* () 
     let resp;
     try {
         const userId = req.body._id;
-        const user = yield user_1.default.findById(userId, { name: 1, email: 1 });
-        user.name = req.body.name;
-        yield user.save();
-        resp = { status: "success", message: "User Data", data: { user: user } };
-        res.send(resp);
+        const user = yield user_1.default.findById(userId, { name: 1 });
+        if (user) {
+            user.name = req.body.name;
+            yield user.save();
+            resp = { status: "success", message: "User Data", data: { user: user } };
+            res.send(resp);
+        }
     }
     catch (error) {
         console.log(error);
