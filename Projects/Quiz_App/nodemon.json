@@ -1,9 +1,0 @@
-{
-    "env":{
-        "CONNECTION_STRING":"mongodb+srv://syeda:razi@QuizApp.d0uixi9.mongodb.net/?retryWrites=true&w=majority&appName=AtlasApp",
-        "PORT":3000
-    },
-    "watch":["src"],
-    "ext": "ts,json",
-    "exec": "ts-node ./src/app.ts"
-}
