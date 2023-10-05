@@ -6,14 +6,15 @@ import userRoute from "./routes/user";
 
 
 // Replace the uri string with your connection string.
-const uri = "mongodb+srv://syeda:razi@QuizApp.d0uixi9.mongodb.net/?retryWrites=true&w=majority&appName=AtlasApp";
+
+const uri = process.env.CONNECTION_STRING || "" ;
 
 const app = express();
 
 mongoose.connect(uri)
     .then(() => {
     console.log('connected to DB!');
-    app.listen(3000,()=>
+    app.listen(process.env.PORT,()=>
     console.log("Server is running"));
     })
     .catch(error => console.log(error))

@@ -1,0 +1,51 @@
+Algorithm to create a Quiz app manager
+
+1. yarn --init
+2. yarn add express
+3. yarn add typescript
+4. Create a source folder
+5. Create multilayers inside your src folder
+6. tsc --init
+7. Start coding from your entry point app.ts
+8. Make changes in the tconfig.json
+9. Add scripts to your package.json
+10.Add definitions for express and node 
+   yarn add --dev @types/node
+   yarn add --dev @types/express
+
+11. --yarn add mongodb
+    --yarn add mongoose
+
+12. Connect from app.ts to ur mongodb server
+13. Create schema
+14. Create model
+15. Default created at data - add timestamp:true to the model 
+
+make email as index
+fixed response format use interface
+User dynamic parameters to hit  other user operations 
+
+MongoDB saves our data in BSON form
+Projection
+
+
+--yarn add ts-node:For avoiding repetitative yarn:build 
+-- yarn add --dev nodemon:runs code dynamically
+
+Hide connection string and port number
+Limit nodemon watch area
+
+Password Handling   
+-encoding password in base64 or any other encryption is still risky.
+-Bcryptjs package can be used instead:
+    --yarn add bcryptjs
+    --yarn add @types/bcryptjs
+
+Login user
+-add login router
+-read data from req body
+-find user by email
+-verify password
+
+To maintain sessions and state:
+--yarn add jsonwebtoken
