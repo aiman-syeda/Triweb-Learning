@@ -43,7 +43,9 @@ Feel free to navigate through the folders and files within this repository to ac
   [**2.HTML_CSS_JAVASCRIPT_PROJECT:**]()This is something fun! A simple color game.
   
   [**3.Quiz_App:**]()An application where users can Register, login, update, and create, update, quiz for other users in the application. 
+
   [**4.Registration_Form:**](https://github.com/aiman-syeda/Triweb-Learning/tree/main/Project/HTML_CSS_JS_Project)This is a Simple Registration Form project in my repository! In this project, we've crafted a straightforward and user-friendly registration form using the power of HTML, CSS, and JavaScript..
+  
  - [**My_SQL:**](https://github.com/aiman-syeda/Triweb-Learning/tree/main/My_SQL) MySQL basics and demonstrates how to perform CRUD operations, aggregate data, use GROUP BY and ORDER BY clauses, and apply UNION and JOIN operations:
  - [**Node JS:**](https://github.com/aiman-syeda/Triweb-Learning/tree/main/Node%20JS)Get started with express framework to create a simple app,You will find here simple calculator app which takes input in JSON format , performs addition,subtraction,multiplication or division as per the urls hitted and gives you the result. 
  
