@@ -39,7 +39,9 @@ Feel free to navigate through the folders and files within this repository to ac
   - **Projects**:
 
   [**1.BasicProjectNodeJS:**](https://github.com/aiman-syeda/Triweb-Learning/tree/main/Project/BasicProjectNodeJS#readme)In this folder, you'll discover a straightforward backend of application designed to perform common user operations: creating,retrieving, updating, and deleting users.
+  
   [**2.HTML_CSS_JAVASCRIPT_PROJECT:**]()This is something fun! A simple color game.
+  
   [**3.Quiz_App:**]()An application where users can Register, login, update, and create, update, quiz for other users in the application. 
   [**4.Registration_Form:**](https://github.com/aiman-syeda/Triweb-Learning/tree/main/Project/HTML_CSS_JS_Project)This is a Simple Registration Form project in my repository! In this project, we've crafted a straightforward and user-friendly registration form using the power of HTML, CSS, and JavaScript..
  - [**My_SQL:**](https://github.com/aiman-syeda/Triweb-Learning/tree/main/My_SQL) MySQL basics and demonstrates how to perform CRUD operations, aggregate data, use GROUP BY and ORDER BY clauses, and apply UNION and JOIN operations:
