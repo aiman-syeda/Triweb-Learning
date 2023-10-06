@@ -9,7 +9,7 @@ interface ReturnResponse {
 }
 
 
-const getUser = async (req: Request, res: Response) => {
+const getUser = async (req: Request, res: Response, next: NextFunction) => {
     let resp: ReturnResponse;
     try {
         if (req.userId != req.params.userId) {
@@ -27,14 +27,12 @@ const getUser = async (req: Request, res: Response) => {
             res.send(resp);
         }
     } catch (error) {
-
-        resp = { status: "error", message: "No user found", data: {} };
-        res.send(resp);
+        next(error);
     }
 
 };
 
-const updateUser = async (req: Request, res: Response) => {
+const updateUser = async (req: Request, res: Response, next: NextFunction) => {
     let resp: ReturnResponse;
     try {
         if (req.userId != req.body._id) {
@@ -53,10 +51,8 @@ const updateUser = async (req: Request, res: Response) => {
             resp = { status: "error", message: "Inavild input", data: {} };
             res.send(resp);
         }
-
     } catch (error) {
-        console.log(error);
-        res.status(400).send("Invalid inputs");
+        next(error);
     }
 
 };

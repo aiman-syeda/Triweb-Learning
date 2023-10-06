@@ -13,7 +13,7 @@ interface ReturnResponse {
 
 
 
-const userRegisteration = async (req: Request, res: Response) => {
+const userRegisteration = async (req: Request, res: Response, next:NextFunction) => {
 
     let resp: ReturnResponse;
 
@@ -32,12 +32,11 @@ const userRegisteration = async (req: Request, res: Response) => {
             res.send(resp);
         }
     } catch (error) {
-        
-        res.status(400).send("Invalid inputs");
+        next(error);
     }
 };
 
-const userLogin = async (req: Request, res: Response) => {
+const userLogin = async (req: Request, res: Response, next:NextFunction) => {
     let resp: ReturnResponse;
 
     try {
@@ -62,8 +61,7 @@ const userLogin = async (req: Request, res: Response) => {
             res.status(401).send(resp);
         }
     } catch (error) {
-        console.log(error);
-        res.status(400).send("Invalid inputs");
+        next(error);
     }
 
 };
