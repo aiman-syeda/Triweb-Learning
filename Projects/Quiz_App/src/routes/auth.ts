@@ -10,7 +10,7 @@ const router = express.Router();
 router.get('/:userId',isAuthenticated, getUser);
 
 //put method to update user data
-router.put('/',updateUser);
+router.put('/',isAuthenticated, updateUser);
 
 
 

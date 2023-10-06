@@ -14,9 +14,9 @@ const isAuthenticated = (req: Request, res: Response, next: NextFunction) => {
     }
     const token = authHeader.split(' ')[1];
     //decoding token usind sign 
-    let decodedToken;
+    let decodedToken:{userId:String, iat:Number,exp:Number};
     try {
-        decodedToken = jwt.verify(token, "Itisreallyconfidential");
+        decodedToken = <any>jwt.verify(token, "Itisreallyconfidential");
     } catch (error) {
         const err = new Error('User not authenticated');
         //err.statusCode = 401;
@@ -35,8 +35,9 @@ const isAuthenticated = (req: Request, res: Response, next: NextFunction) => {
         const userid = decodedToken;
     }
 
+    
+    req.userId = decodedToken.userId;
     next();
-    console.log(decodedToken);
 
 
 };
