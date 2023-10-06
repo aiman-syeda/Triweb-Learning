@@ -20,7 +20,13 @@ mongoose.connect(uri)
     })
     .catch(error => console.log(error))
     
-
+declare global { 
+    namespace Express {
+        interface Request{
+            userId:String;
+        }
+    }
+}
 app.use(express.json());
 
 app.use('/user',userRoute);
