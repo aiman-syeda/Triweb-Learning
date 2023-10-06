@@ -3,6 +3,7 @@ import mongoose from 'mongoose';
 
 
 import userRoute from "./routes/user";
+import authRoute from "./routes/auth";
 
 
 // Replace the uri string with your connection string.
@@ -20,12 +21,9 @@ mongoose.connect(uri)
     .catch(error => console.log(error))
     
 
-
-app.get('/',(req,res) => {
-    res.send('Hello!');
-});
-
 app.use(express.json());
 
 app.use('/user',userRoute);
+
+app.use('/auth',authRoute);
 

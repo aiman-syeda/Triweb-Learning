@@ -1,13 +1,17 @@
 import mongoose from "mongoose";
-import bcrypt from 'bcryptjs';
-import { Request, Response } from "express";
+import bcrypt from "bcryptjs";
+import jwt from "jsonwebtoken";
+import { Request, Response, NextFunction } from "express";
 import User from "../models/user";
+
 
 interface ReturnResponse {
     status: "success" | "error",
     message: String,
     data: {}
 }
+
+
 
 const userRegisteration = async (req: Request, res: Response) => {
 
@@ -25,11 +29,10 @@ const userRegisteration = async (req: Request, res: Response) => {
             res.send(resp);
         } else {
             resp = { status: "success", message: "Registration done", data: { userId: result._id } };
-
             res.send(resp);
         }
     } catch (error) {
-        //console.log(error);
+        
         res.status(400).send("Invalid inputs");
     }
 };
@@ -47,7 +50,8 @@ const userLogin = async (req: Request, res: Response) => {
         if(user){
             const status = bcrypt.compareSync(password, user.password ?? "");
             if (status) {
-                resp = { status: "success", message: "Logged in", data: { } };
+                const token = jwt.sign({userId:user._id},"Itisreallyconfidential",{expiresIn:"1h"});
+                resp = { status: "success", message: "Logged in", data: {token} };
                 res.status(200).send(resp);
             } else {
                 resp = { status: "error", message: "Inavild input", data: {} };
@@ -64,47 +68,4 @@ const userLogin = async (req: Request, res: Response) => {
 
 };
 
-
-const getUser = async (req: Request, res: Response) => {
-    let resp: ReturnResponse;
-    try {
-        const userId = req.params.userId;
-        const user = await User.findById(userId, { name: 1, email: 1 });
-        if (!user) {
-            resp = { status: "error", message: "No user found", data: {} };
-            res.send(resp);
-        } else {
-            resp = { status: "success", message: "User Data", data: { user: user } };
-            res.send(resp);
-        }
-    } catch (error) {
-        console.log(error);
-        res.status(400).send("Invalid inputs");
-    }
-
-};
-
-const updateUser = async (req: Request, res: Response) => {
-    let resp: ReturnResponse;
-    try {
-        const userId = req.body._id;
-        const user = await User.findById(userId, { name: 1 });
-        if (user) {
-            user.name = req.body.name;
-            await user.save();
-            resp = { status: "success", message: "User Data", data: { user: user } };
-            res.send(resp);
-        } else {
-            resp = { status: "error", message: "Inavild input", data: {} };
-            res.send(resp);
-        }
-
-    } catch (error) {
-        console.log(error);
-        res.status(400).send("Invalid inputs");
-    }
-
-};
-
-
-export { userRegisteration, userLogin, getUser, updateUser };
+export { userRegisteration, userLogin };

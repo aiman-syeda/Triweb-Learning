@@ -5,17 +5,17 @@ const userschema = new schema(
     {
         name:{
             type:String,
-            reuired:true
+            required:true
         },
         email:{
             type:String,
-            reuired:true,
+            required:true,
             unique:true,
             index:true
         },
         password:{
             type:String,
-            reuired:true
+            required:true
         }
     },
     {timestamps:true}
