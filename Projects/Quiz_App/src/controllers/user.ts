@@ -1,10 +1,12 @@
 import mongoose from "mongoose";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
+import { validationResult } from "express-validator";
 
 import ProjectError from "../helper/error";
 import { Request, Response, NextFunction } from "express";
 import User from "../models/user";
+import { error } from "console";
 
 
 interface ReturnResponse {
@@ -24,6 +26,15 @@ const userRegisteration = async (req: Request, res: Response, next: NextFunction
     let password = await bcrypt.hash(req.body.password, 12);
 
     try {
+        const validateError = validationResult(req);
+        if (!validateError.isEmpty()) {
+            const err = new ProjectError("Validation failed!");
+            err.statusCode = 422; //for invalid fields
+            err.data = validateError.array();
+            throw err;
+
+        }
+
         const user = new User({ name, email, password });
         const result = await user.save();
         if (!result) {
@@ -70,4 +81,14 @@ const userLogin = async (req: Request, res: Response, next: NextFunction) => {
 
 };
 
-export { userRegisteration, userLogin };
+const ifUserexists = async (email: String) => {
+    const user = await User.findOne({ email });
+    if (!user) {
+        return false;
+
+    } else {
+        return true;
+    }
+}
+
+export { userRegisteration, userLogin, ifUserexists };

@@ -15,7 +15,8 @@ const userschema = new schema(
         },
         password:{
             type:String,
-            required:true
+            required:true,
+        
         }
     },
     {timestamps:true}
