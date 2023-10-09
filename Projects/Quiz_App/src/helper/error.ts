@@ -1,7 +1,7 @@
 export default class ProjectError extends Error {
 
     private _status: number = 0;
-    private _data: object | [] = {};
+    private _data: Object | [] = {};
 
     get statusCode(): number {
         return this._status;
@@ -9,10 +9,10 @@ export default class ProjectError extends Error {
     set statusCode(code: number) {
         this._status = code;
     }
-    get data(): object {
+    get data(): Object {
         return this._data;
     }
     set data(errorData: Object) {
-        this.data = errorData;
+        this._data = errorData;
     }
 }
