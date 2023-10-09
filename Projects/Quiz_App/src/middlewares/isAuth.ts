@@ -1,5 +1,6 @@
 import { Request, Response, NextFunction } from "express";
 import jwt from "jsonwebtoken";
+import ProjectError from "../helper/error";
 
 
 const isAuthenticated = (req: Request, res: Response, next: NextFunction) => {
@@ -8,8 +9,8 @@ const isAuthenticated = (req: Request, res: Response, next: NextFunction) => {
         //get header from token 
         const authHeader = req.get('Authorization');
         if (!authHeader) {
-            const err = new Error('User not authenticated');
-            //err.statusCode = 401;
+            const err = new ProjectError('User not authenticated');
+            err.statusCode = 401;
             throw err;
             //res.status(401).send('User not authenticated');
         }
@@ -19,19 +20,18 @@ const isAuthenticated = (req: Request, res: Response, next: NextFunction) => {
         try {
             decodedToken = <any>jwt.verify(token, "Itisreallyconfidential");
         } catch (error) {
-            const err = new Error('User not authenticated');
-            //err.statusCode = 401;
+            const err = new ProjectError('User not authenticated');
+            err.statusCode = 401;
             throw err;
-            //res.status(401).send('User not authenticated');
+
         }
 
 
         //get userId from decoded token
         if (!decodedToken) {
-            const err = new Error('User not authenticated');
-            //err.statusCode = 401;
+            const err = new ProjectError('User not authenticated');
+            err.statusCode = 401;
             throw err;
-            //res.status(401).send('User not authenticated');
         } else {
             const userid = decodedToken;
         }
@@ -43,7 +43,7 @@ const isAuthenticated = (req: Request, res: Response, next: NextFunction) => {
 
     } catch (error) {
         next(error);
-}
+    }
 }
 
 export { isAuthenticated };

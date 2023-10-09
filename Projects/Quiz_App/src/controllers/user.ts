@@ -1,6 +1,8 @@
 import mongoose from "mongoose";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
+
+import ProjectError from "../helper/error";
 import { Request, Response, NextFunction } from "express";
 import User from "../models/user";
 
@@ -8,12 +10,12 @@ import User from "../models/user";
 interface ReturnResponse {
     status: "success" | "error",
     message: String,
-    data: {}
+    data: {} | []
 }
 
 
 
-const userRegisteration = async (req: Request, res: Response, next:NextFunction) => {
+const userRegisteration = async (req: Request, res: Response, next: NextFunction) => {
 
     let resp: ReturnResponse;
 
@@ -36,7 +38,7 @@ const userRegisteration = async (req: Request, res: Response, next:NextFunction)
     }
 };
 
-const userLogin = async (req: Request, res: Response, next:NextFunction) => {
+const userLogin = async (req: Request, res: Response, next: NextFunction) => {
     let resp: ReturnResponse;
 
     try {
@@ -46,19 +48,21 @@ const userLogin = async (req: Request, res: Response, next:NextFunction) => {
         const user = await User.findOne({ email });
 
         //verify password
-        if(user){
+        if (user) {
             const status = bcrypt.compareSync(password, user.password ?? "");
             if (status) {
-                const token = jwt.sign({userId:user._id},"Itisreallyconfidential",{expiresIn:"1h"});
-                resp = { status: "success", message: "Logged in", data: {token} };
+                const token = jwt.sign({ userId: user._id }, "Itisreallyconfidential", { expiresIn: "1h" });
+                resp = { status: "success", message: "Logged in", data: { token } };
                 res.status(200).send(resp);
             } else {
-                resp = { status: "error", message: "Inavild input", data: {} };
-                res.status(401).send(resp);
+                const err = new ProjectError("Invalid input");
+                err.statusCode = 401;
+                throw err;
             }
-        }else{
-            resp = { status: "error", message: "Inavild input", data: {} };
-            res.status(401).send(resp);
+        } else {
+            const err = new ProjectError("User doesn't exists");
+            err.statusCode = 401;
+            throw err;
         }
     } catch (error) {
         next(error);
