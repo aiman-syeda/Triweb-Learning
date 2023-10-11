@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 import { validationResult } from "express-validator";
@@ -6,7 +6,7 @@ import { validationResult } from "express-validator";
 import ProjectError from "../helper/error";
 import { Request, Response, NextFunction } from "express";
 import User from "../models/user";
-import { error } from "console";
+
 
 
 interface ReturnResponse {
