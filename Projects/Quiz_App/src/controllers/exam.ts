@@ -4,6 +4,12 @@ import Quiz from "../models/quiz";
 import ProjectError from "../helper/error";
 import Result from "../models/result";
 
+interface ReturnResponse {
+   status: "success" | "error",
+   message: String,
+   data: {} | []
+}
+
 const startExam = async (req:Request,res:Response,next:NextFunction) => {
    try {
       const quizId = req.params.quizid;
@@ -18,7 +24,9 @@ const startExam = async (req:Request,res:Response,next:NextFunction) => {
          err.statusCode = 405;
          throw err;
       }
-      res.send(quiz);
+      const resp: ReturnResponse = { status: "success", message: "Quiz", data: { quiz } };
+      res.status(200).send(resp);
+      
    } catch (error) {
       next(error);
    }
@@ -50,7 +58,9 @@ const submitExam =async  (req:Request,res:Response,next:NextFunction) => {
       }
       const result = new Result({userId,quizId,total,score});
       const data = await result.save();
-      res.send({total,score,resultId:data._id});
+      const resp: ReturnResponse = { status: "success", message: "Quiz Submitted!", data: { total,score,resultId:data._id } };
+        res.status(200).send(resp);
+   
    } catch (error) {
       next(error);
    }
