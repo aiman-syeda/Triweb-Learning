@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const schema = mongoose.Schema;
 
-const resultschema = new schema(
+const reportschema = new schema(
     {
         userId: {
             type: mongoose.Types.ObjectId,
@@ -25,6 +25,6 @@ const resultschema = new schema(
 );
 
 
-const Result = mongoose.model("Result", resultschema);
+const Report = mongoose.model("Report", reportschema);
 
-export default Result;
+export default Report;

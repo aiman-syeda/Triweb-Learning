@@ -2,12 +2,8 @@ import mongoose from "mongoose";
 import { Request, Response, NextFunction } from "express";
 import User from "../models/user";
 import ProjectError from "../helper/error";
+import { ReturnResponse } from "../utils/interfaces";
 
-interface ReturnResponse {
-    status: "success" | "error",
-    message: String,
-    data: {} | []
-}
 
 
 const getUser = async (req: Request, res: Response, next: NextFunction) => {

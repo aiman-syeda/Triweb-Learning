@@ -1,13 +1,14 @@
 import express from 'express';
 import { Request, Response, NextFunction } from 'express';
 import mongoose from 'mongoose';
-import ProjectError from './helper/error';
 
-
+import ProjectError from "./helper/error";
 import userRoute from "./routes/user";
 import authRoute from "./routes/auth";
-import  quizRoute from './routes/quiz';
+import quizRoute from "./routes/quiz";
 import examRoute from "./routes/exam";
+import reportRoute from "./routes/report";
+import { ReturnResponse } from "./utils/interfaces";
 
 
 
@@ -18,11 +19,6 @@ const uri = process.env.CONNECTION_STRING || "";
 
 const app = express();
 
-interface ReturnResponse {
-    status: "success" | "error",
-    message: String,
-    data: {} | []
-}
 
 app.use(express.json());
 
@@ -30,9 +26,11 @@ app.use('/user', userRoute);
 
 app.use('/auth', authRoute);
 
-app.use('/quiz',quizRoute);
+app.use('/quiz', quizRoute);
 
-app.use('/exam',examRoute);
+app.use('/exam', examRoute);
+
+app.use('/report', reportRoute);
 
 
 app.use((err: ProjectError, req: Request, res: Response, next: NextFunction) => {

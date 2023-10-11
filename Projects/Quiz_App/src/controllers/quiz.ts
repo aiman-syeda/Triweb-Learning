@@ -4,11 +4,8 @@ import { validationResult } from "express-validator";
 
 import Quiz from "../models/quiz";
 import ProjectError from "../helper/error";
-interface ReturnResponse {
-    status: "success" | "error",
-    message: String,
-    data: {} | []
-}
+import { ReturnResponse } from "../utils/interfaces";
+
 
 const createQuiz = async (req: Request, res: Response, next: NextFunction) => {
     try {

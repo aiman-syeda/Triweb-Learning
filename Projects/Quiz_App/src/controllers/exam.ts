@@ -2,13 +2,9 @@
 import { NextFunction, Request,Response } from "express";
 import Quiz from "../models/quiz";
 import ProjectError from "../helper/error";
-import Result from "../models/result";
+import Report from "../models/report";
+import { ReturnResponse } from "../utils/interfaces";
 
-interface ReturnResponse {
-   status: "success" | "error",
-   message: String,
-   data: {} | []
-}
 
 const startExam = async (req:Request,res:Response,next:NextFunction) => {
    try {
@@ -56,9 +52,9 @@ const submitExam =async  (req:Request,res:Response,next:NextFunction) => {
             score += 1;
          }
       }
-      const result = new Result({userId,quizId,total,score});
-      const data = await result.save();
-      const resp: ReturnResponse = { status: "success", message: "Quiz Submitted!", data: { total,score,resultId:data._id } };
+      const report = new Report({userId,quizId,total,score});
+      const data = await report.save();
+      const resp: ReturnResponse = { status: "success", message: "Quiz Submitted!", data: { total,score,reportId:data._id } };
         res.status(200).send(resp);
    
    } catch (error) {

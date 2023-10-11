@@ -6,15 +6,7 @@ import { validationResult } from "express-validator";
 import ProjectError from "../helper/error";
 import { Request, Response, NextFunction } from "express";
 import User from "../models/user";
-
-
-
-interface ReturnResponse {
-    status: "success" | "error",
-    message: String,
-    data: {} | []
-}
-
+import { ReturnResponse } from "../utils/interfaces";
 
 
 const userRegisteration = async (req: Request, res: Response, next: NextFunction) => {
