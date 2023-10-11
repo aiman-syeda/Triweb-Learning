@@ -3,7 +3,7 @@ import express from "express";
 import { body } from "express-validator";
 
 
-import { userRegisteration, userLogin, ifUserexists } from "../controllers/user";
+import { userRegisteration, userLogin, ifUserexists,activateUser,activateUserCallback } from "../controllers/user";
 
 const router = express.Router();
 
@@ -45,5 +45,18 @@ body("email")
 
 //post method for login
 router.post('/login', userLogin);
+
+//POST /auth/activate account
+router.post(
+    "/activate",
+    [body("email").trim().isEmail().withMessage("Invalid Email!")],
+    activateUser
+  );
+
+  //re-activate link
+// GET /user/activate
+router.get("/activate/:token", activateUserCallback);
+
+
 
 export default router;

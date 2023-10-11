@@ -1,9 +1,9 @@
 import { Request, Response, NextFunction } from "express";
 import jwt from "jsonwebtoken";
 import ProjectError from "../helper/error";
+import { isActiveUser } from "../controllers/auth";
 
-
-const isAuthenticated = (req: Request, res: Response, next: NextFunction) => {
+const isAuthenticated = async (req: Request, res: Response, next: NextFunction) => {
 
     try {
         //get header from token 
@@ -32,10 +32,13 @@ const isAuthenticated = (req: Request, res: Response, next: NextFunction) => {
             const err = new ProjectError('User not authenticated');
             err.statusCode = 401;
             throw err;
-        } else {
-            const userid = decodedToken;
         }
-
+        //isActiveUser in user controller else inactive user
+        if (!(await isActiveUser(decodedToken.userId))) {
+            const err = new ProjectError("User is deactivated!");
+            err.statusCode = 422;
+            throw err;
+        }
 
         req.userId = decodedToken.userId;
         next();

@@ -15,9 +15,12 @@ const userschema = new schema(
         },
         password:{
             type:String,
-            required:true,
-        
-        }
+            required:true
+        },
+        isDeactivated: {
+            type: Boolean,
+            default: false,
+          },
     },
     {timestamps:true}
 );
