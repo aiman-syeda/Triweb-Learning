@@ -6,3 +6,4 @@
 **/local-env/
 **.class
 Overview.txt
+**/nodemon.json
