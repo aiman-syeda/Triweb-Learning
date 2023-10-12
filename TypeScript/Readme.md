@@ -5,7 +5,7 @@ A JavaScript project can be easily converted into a TypeScript project..Here I h
 
 - 📁 [**Source_Folder:**](https://github.com/aiman-syeda/Triweb-Learning/tree/main/TypeScript/src)
   
-     1.[app.ts:](https://github.com/aiman-syeda/Triweb-Learning/blob/main/TypeScript/src/app.ts)This is the entry point of a project.
+     1. [app.ts:](https://github.com/aiman-syeda/Triweb-Learning/blob/main/TypeScript/src/app.ts)This is the entry point of a project.
 
      2. [controllers:](https://github.com/aiman-syeda/Triweb-Learning/tree/main/TypeScript/src/controller)The functionality of a project lies in this folder.And controllers also connects with models.
 
