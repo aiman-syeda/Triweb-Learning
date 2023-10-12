@@ -47,9 +47,15 @@ Feel free to navigate through the folders and files within this repository to ac
        📁 [**Quiz_App:**](https://github.com/aiman-syeda/Triweb-Learning/blob/main/Projects/Quiz_App/Readme.md)An application where users can Register, login, update, their account and also user can create, update,publish quiz and get results.It demonstrates use of many express packages for more details click on Quiz_App above.
 
         
-  
- - [**My_SQL:**](https://github.com/aiman-syeda/Triweb-Learning/blob/main/My_SQL/Readme.md) MySQL basics and demonstrates how to perform CRUD operations, aggregate data, use GROUP BY and ORDER BY clauses, and apply UNION and JOIN operations:
- - [**Node JS:**](https://github.com/aiman-syeda/Triweb-Learning/blob/main/Node%20JS/Readme.md)Get started with express framework to create a simple app,You will find here simple calculator app which takes input in JSON format , performs addition,subtraction,multiplication or division as per the urls hitted and gives you the result. 
+ - [**ES6:**](https://github.com/aiman-syeda/Triweb-Learning/blob/main/ES6/Readme.md)Here are the example of some of the concepts that were introduced by EcmaScript-6 to standardize JavaScript in the year 2015.
+
+ - [**My_SQL:**](https://github.com/aiman-syeda/Triweb-Learning/blob/main/My_SQL/Readme.md) MySQL basics and demonstrates how to perform CRUD operations, aggregate data, use GROUP BY and ORDER BY clauses, and apply UNION and JOIN operations.
+
+ - [**Node JS:**](https://github.com/aiman-syeda/Triweb-Learning/blob/main/Node%20JS/Readme.md)Get started with express framework to create a simple app,You will find here simple calculator app which takes input in JSON format , performs addition,subtraction,multiplication or division as per the urls hitted and gives you the result.
+
+ - [**MongoDB:**](https://github.com/aiman-syeda/Triweb-Learning/blob/main/MongoDB/Readme.md)Learn basic CRUD operations in MongoDB.
+ 
+ - [**Typescript:**](https://github.com/aiman-syeda/Triweb-Learning/blob/main/TypeScript/Readme.md)Simple project in typescript. 
 
 
  For more details on this repo,Do hit on the links to navigate through any of the projects you like!
