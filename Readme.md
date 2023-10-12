@@ -38,13 +38,15 @@ Feel free to navigate through the folders and files within this repository to ac
  - [**JavaScript:**](https://github.com/aiman-syeda/Triweb-Learning/tree/main/JavaScript)Explore Core JavaScript Concepts.In this section, you can dive into the essential building blocks of JavaScript
   - **Projects**:
 
-  [**1.BasicProjectNodeJS:**](https://github.com/aiman-syeda/Triweb-Learning/tree/main/Project/BasicProjectNodeJS#readme)In this folder, you'll discover a straightforward backend of application designed to perform common user operations: creating,retrieving, updating, and deleting users.
+       📁 [**BasicProjectNodeJS:**](https://github.com/aiman-syeda/Triweb-Learning/tree/main/Project/BasicProjectNodeJS#readme)In this folder, you'll discover a straightforward backend of application designed to perform common user operations: creating,retrieving, updating, and deleting users.
   
-  [**2.HTML_CSS_JAVASCRIPT_PROJECT:**]()This is something fun! A simple color game.
-  
-  [**3.Quiz_App:**]()An application where users can Register, login, update, and create, update, quiz for other users in the application. 
+       📁 [**HTML_CSS_JAVASCRIPT_PROJECT:**]()This is something fun! A simple color game.
 
-  [**4.Registration_Form:**](https://github.com/aiman-syeda/Triweb-Learning/tree/main/Project/HTML_CSS_JS_Project)This is a Simple Registration Form project in my repository! In this project, we've crafted a straightforward and user-friendly registration form using the power of HTML, CSS, and JavaScript..
+       📁 [**Registration_Form:**](https://github.com/aiman-syeda/Triweb-Learning/tree/main/Projects/Registration_Form_Project#readme)This is a Simple Registration Form project in my repository! In this project, we've crafted a straightforward and user-friendly registration form using the power of HTML, CSS, and JavaScript..
+  
+       📁 [**Quiz_App:**]()An application where users can Register, login, update, their account and also user can create, update,publish quiz and get results.It demonstrates use of many express packages for more details click on Quiz_App above.
+
+        
   
  - [**My_SQL:**](https://github.com/aiman-syeda/Triweb-Learning/tree/main/My_SQL) MySQL basics and demonstrates how to perform CRUD operations, aggregate data, use GROUP BY and ORDER BY clauses, and apply UNION and JOIN operations:
  - [**Node JS:**](https://github.com/aiman-syeda/Triweb-Learning/tree/main/Node%20JS)Get started with express framework to create a simple app,You will find here simple calculator app which takes input in JSON format , performs addition,subtraction,multiplication or division as per the urls hitted and gives you the result. 
