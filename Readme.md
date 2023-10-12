@@ -33,9 +33,9 @@ Feel free to navigate through the folders and files within this repository to ac
 
 ## Index
 
- - [**HTML:**](https://github.com/aiman-syeda/Triweb-Learning/tree/main/HTML/Form)Learn how to create the basic structure of a webpage, including headings, paragraphs, lists, and links.
- - [**CSS:**](https://github.com/aiman-syeda/Triweb-Learning/tree/main/CSS)Learn how to use CSS to create stunning, visually engaging websites. Unleash your creativity to customize fonts, backgrounds, borders, and more.Apply CSS to your timetables for a polished and professional look. Customize colors, fonts, and spacing to make your schedules clear and attractive. 
- - [**JavaScript:**](https://github.com/aiman-syeda/Triweb-Learning/tree/main/JavaScript)Explore Core JavaScript Concepts.In this section, you can dive into the essential building blocks of JavaScript
+ - [**HTML:**](https://github.com/aiman-syeda/Triweb-Learning/blob/main/HTML/Form/Readme.md)Learn how to create the basic structure of a webpage, including headings, paragraphs, lists, and links.
+ - [**CSS:**](https://github.com/aiman-syeda/Triweb-Learning/blob/main/CSS/Readme.md)Learn how to use CSS to create stunning, visually engaging websites. Unleash your creativity to customize fonts, backgrounds, borders, and more.Apply CSS to your timetables for a polished and professional look. Customize colors, fonts, and spacing to make your schedules clear and attractive. 
+ - [**JavaScript:**](https://github.com/aiman-syeda/Triweb-Learning/blob/main/JavaScript/Readme.md)Explore Core JavaScript Concepts.In this section, you can dive into the essential building blocks of JavaScript
   - **Projects**:
 
        📁 [**BasicProjectNodeJS:**](https://github.com/aiman-syeda/Triweb-Learning/tree/main/Project/BasicProjectNodeJS#readme)In this folder, you'll discover a straightforward backend of application designed to perform common user operations: creating,retrieving, updating, and deleting users.
@@ -48,8 +48,14 @@ Feel free to navigate through the folders and files within this repository to ac
 
         
   
- - [**My_SQL:**](https://github.com/aiman-syeda/Triweb-Learning/tree/main/My_SQL) MySQL basics and demonstrates how to perform CRUD operations, aggregate data, use GROUP BY and ORDER BY clauses, and apply UNION and JOIN operations:
- - [**Node JS:**](https://github.com/aiman-syeda/Triweb-Learning/tree/main/Node%20JS)Get started with express framework to create a simple app,You will find here simple calculator app which takes input in JSON format , performs addition,subtraction,multiplication or division as per the urls hitted and gives you the result. 
+ - [**My_SQL:**](https://github.com/aiman-syeda/Triweb-Learning/blob/main/My_SQL/Readme.md) MySQL basics and demonstrates how to perform CRUD operations, aggregate data, use GROUP BY and ORDER BY clauses, and apply UNION and JOIN operations:
+ - [**Node JS:**](https://github.com/aiman-syeda/Triweb-Learning/blob/main/Node%20JS/Readme.md)Get started with express framework to create a simple app,You will find here simple calculator app which takes input in JSON format , performs addition,subtraction,multiplication or division as per the urls hitted and gives you the result. 
+
+
+ For more details on this repo,Do hit on the links to navigate through any of the projects you like!
+
+ This work is done during my internship @TriwebGenesis, It was a great opportunity to learn and grow with this wonderful,supportive team and improve my skills, and have proper exposure to MERN Stack development.
+ I would really like to show gratitude to the Team #TriwebGenesis. 
  
 
 

@@ -1,13 +1,13 @@
 # Basic_Project_In_NodeJS
 
-This is a simple application's backend where a user can be added, it's credentials can be updated , validated and deleted.
+This is a simple application's backend where a user can be added, it's credentials can be updated , validated and deleted.This app consists of a router file, a controller file, and an index file. It also demonstrates how to connect your data model to a PHPMyAdmin database using SQL and Sequelize. Whether you're new to Node.js or looking to understand how to integrate your application with a SQL database, this section provides a clear and practical example of how it all comes together.
 
 
 ## Prerequisites
 
 - [**Visual_Studio_Code**](https://code.visualstudio.com/Download):I have used [VS_Code](https://code.visualstudio.com/Download) to create this app.As it is really useful tool for a web developer and provides amazing editing features and properties.
 
-- [**Postman**](https://www.postman.com/downloads/):To use Get and Post methods for a URL you will need this.
+- [**Postman**](https://www.postman.com/downloads/):To use Get and Post methods for a URL you will need this.You may also use any other tool as per your comfort.
 
 - [**Xampp**](https://www.apachefriends.org/download_success.html):In our application store and manipulate our data on phpmyadmin and for that we need to install and setup xampp and start Apache server and MySQL before executing the application.
 
