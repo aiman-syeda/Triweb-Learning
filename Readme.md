@@ -38,7 +38,7 @@ Feel free to navigate through the folders and files within this repository to ac
  - [**JavaScript:**](https://github.com/aiman-syeda/Triweb-Learning/blob/main/JavaScript/Readme.md)Explore Core JavaScript Concepts.In this section, you can dive into the essential building blocks of JavaScript
   - **Projects**:
 
-       📁 [**BasicProjectNodeJS:**](https://github.com/aiman-syeda/Triweb-Learning/tree/main/Project/BasicProjectNodeJS#readme)In this folder, you'll discover a straightforward backend of application designed to perform common user operations: creating,retrieving, updating, and deleting users.
+       📁 [**BasicProjectNodeJS:**](https://github.com/aiman-syeda/Triweb-Learning/blob/main/Projects/BasicProjectNodeJS/Readme.md)In this folder, you'll discover a straightforward backend of application designed to perform common user operations: creating,retrieving, updating, and deleting users.
   
        📁 [**HTML_CSS_JAVASCRIPT_PROJECT:**](https://github.com/aiman-syeda/Triweb-Learning/blob/main/Projects/HTML_CSS_JS_PROJECT/Readme.md)This is something fun! A simple color game.
 
