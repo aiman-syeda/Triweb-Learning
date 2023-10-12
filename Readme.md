@@ -40,11 +40,11 @@ Feel free to navigate through the folders and files within this repository to ac
 
        📁 [**BasicProjectNodeJS:**](https://github.com/aiman-syeda/Triweb-Learning/tree/main/Project/BasicProjectNodeJS#readme)In this folder, you'll discover a straightforward backend of application designed to perform common user operations: creating,retrieving, updating, and deleting users.
   
-       📁 [**HTML_CSS_JAVASCRIPT_PROJECT:**]()This is something fun! A simple color game.
+       📁 [**HTML_CSS_JAVASCRIPT_PROJECT:**](https://github.com/aiman-syeda/Triweb-Learning/blob/main/Projects/HTML_CSS_JS_PROJECT/Readme.md)This is something fun! A simple color game.
 
        📁 [**Registration_Form:**](https://github.com/aiman-syeda/Triweb-Learning/tree/main/Projects/Registration_Form_Project#readme)This is a Simple Registration Form project in my repository! In this project, we've crafted a straightforward and user-friendly registration form using the power of HTML, CSS, and JavaScript..
   
-       📁 [**Quiz_App:**]()An application where users can Register, login, update, their account and also user can create, update,publish quiz and get results.It demonstrates use of many express packages for more details click on Quiz_App above.
+       📁 [**Quiz_App:**](https://github.com/aiman-syeda/Triweb-Learning/blob/main/Projects/Quiz_App/Readme.md)An application where users can Register, login, update, their account and also user can create, update,publish quiz and get results.It demonstrates use of many express packages for more details click on Quiz_App above.
 
         
   
