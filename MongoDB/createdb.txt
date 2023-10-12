@@ -1,26 +1,69 @@
-//Connect to the server the variable client has the connection string
-client.connect()
-
-//Create a cluster or database
-const db = client.db(mycluster)
-
-//A collection names people is created
-const col = db.collection("people")
-
-//A document is the type of data that can be inserted in the database of a mongodb client
- let personDocument = {
-             "name": { "first": "Alan", "last": "Turing" },
-             "birth": new Date(1912, 5, 23), // May 23, 1912                                                                                                                                 
-             "death": new Date(1954, 5, 7),  // May 7, 1954                                                                                                                                  
-             "contribs": [ "Turing machine", "Turing test", "Turingery" ],
-             "views": 1250000
-            }
-
-// Insert the document into the specified collection        
-         const p = col.insertOne(personDocument);
-
-// Find and return the document-Retrieve data
-         const filter = { "name.last": "Turing" };
-         const document = await col.findOne(filter);
-         console.log("Document found:\n" + JSON.stringify(document));
+Basic CRUD operations 
          
+//Create an account on Mongodb Atlas,download mongosh and copy connection string.
+https://www.mongodb.com/cloud/atlas/register
+
+//Follow the instructions from the link above to install mongosh 
+
+//Verify if mongodb shell already installed
+mongosh --version
+-Latest version is shown
+
+//Connect to the server ,replace YOUR_USER_NAME. 
+mongosh "mongodb+srv://cluster0.ex4ht.mongodb.net/myFirstDatabase" --apiVersion 1 --username YOUR_USER_NAME
+
+//To show all databases
+show dbs
+
+//To create your own database
+use my_db
+
+//To create a collection .createCollection() is used
+db.createCollection("users")
+
+//Insert an object
+db.users.insertOne({
+    name:"Priya",
+    email:"priya@gmail.com"
+})
+
+//Similarly many objects can be inserted using insertMany()
+db.users.insertOne({
+    name:"Kavita",
+    email:"kavita@gmail.com"
+},{
+    name:"Niharika",
+    email:"niharika@gmail.com"
+})
+
+//Retrieve data
+db.users.find()
+
+//Retrieve particular data
+db.users.findOne({name:"Priya"})
+
+//Projection, only name of the users will be displayed
+db.users.find({name:1})
+
+//Projection, exclude particular filed
+db.users.find({name:0})
+
+Note:We will get an error if we try to specify both 0 and 1 in the same object.
+
+//update data
+db.users.find( { name: "Priya" } ) 
+db.users.updateOne( { name: "Priya" }, { $set: { name:"Priya Raj" } } ) 
+
+//insert if not found
+db.users.updateOne( { name: "Ajay" }, { $set: { name:"Ajay",email:"ajay@gmailcom" } },{upsert:true} ) 
+
+//update many
+db.posts.updateMany({}, { $set: { email:"none" } })
+
+//delete particular data
+db.users.deleteOne( { name: "Priya" } ) 
+
+//delete multiple data
+db.users.deleteMany( {email:"none"}) 
+
+
