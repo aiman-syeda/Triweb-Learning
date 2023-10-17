@@ -1,13 +1,16 @@
 import { Link } from "react-router-dom";
+import MainMenuStyle from './MainMenu.module.css';
 
 
 function MainMenu() {
-    return <header>
+    return <header className={MainMenuStyle.header}>
         <nav>
             <ul>
-                <li> <Link to="/"> Home</Link></li>
-                <li> <Link to="/about"> About</Link></li>
-                <li> <Link to="/contact"> Contact</Link></li>
+                <li><a><Link to="/"> Home</Link></a></li>
+                <li><a> <Link to="/about"> About</Link></a></li>
+                <li><a> <Link to="/contact"> Contact</Link></a></li>
+                <li><a> <Link to="/product"> Product</Link></a></li>
+
             </ul>
         </nav>
 
