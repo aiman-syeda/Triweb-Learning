@@ -3,7 +3,7 @@ import MainMenuStyle from './MainMenu.module.css';
 
 
 function MainMenu() {
-    return <header className={MainMenuStyle.header}>
+    return <header className={MainMenuStyle}>
         <nav>
             <ul>
                 <li><a><Link to="/"> Home</Link></a></li>
