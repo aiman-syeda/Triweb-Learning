@@ -1,24 +1,26 @@
 import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import AddProduct from './pages/AddProduct';
 import Product from './components/Product';
 import { Route, Routes } from 'react-router-dom';
-import MainMenu from './components/layouts/MainMenu';
+import Layouts from './components/layouts/Layouts';
 
-function App() {  
+function App() {
   return (
     <div >
-      <MainMenu/>
-      <Routes>
-        <Route path="/" element={ <Home/>}></Route>
-        <Route path="/about" element={<About/>}></Route>
-        <Route path="/contact" element={<Contact/>}></Route>
-        <Route path="/product" element={<Product/>}></Route>
-      </Routes>
-     
-      
-      
-      
+      <Layouts>
+        <Routes>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="/about" element={<About />}></Route>
+          <Route path="/contact" element={<Contact />}></Route>
+          <Route path="/product" element={<Product />}></Route>
+          <Route path="/product/add" element={<AddProduct />}></Route>
+        </Routes>
+      </Layouts>
+
+
+
     </div>
   );
 }
