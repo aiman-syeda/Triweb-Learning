@@ -3,7 +3,7 @@ import style from './AddProductForm.module.css';
 import Wrapper from '../layouts/Wrapper';
 
 
-function AddProductForm(){
+function AddProductForm(props){
     const book_name_ref = useRef();
     const author_ref = useRef();
     const description_ref = useRef();
@@ -28,7 +28,7 @@ function AddProductForm(){
             price,
             language
         };
-        console.log(product);
+        props.addProductHandler(product);
     }
 
     return <Wrapper>
