@@ -1,18 +1,36 @@
-const express =  require('express');
+const express = require('express');
 const cors = require('cors');
+const mongoose = require('mongoose');
+
+const Product = require('./models/product')
 
 const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.get('/',(req,res)=>{
+const uri = process.env.connectionString || "";
+
+app.get('/', (req, res) => {
     res.send("Running");
 })
 
-app.post('/product',(req,res)=>{
-    console.log(req.body);
-    res.send({});
+app.post('/product', async (req, res) => {
+    try {
+        const result = await Product.create(req.body);
+        res.send({ status: "success", message: "Product added" });
+
+    } catch (error) {
+        console.log(error.message);
+        res.send({ status: "error", message: error.message });
+    }
 
 })
 
-app.listen(3002);
+
+mongoose.connect(uri)
+    .then(() => {
+        console.log('connected to DB!');
+        app.listen(process.env.PORT, () =>
+            console.log("Server is running"));
+    })
+    .catch(error => console.log(error))
