@@ -5,6 +5,7 @@ import AddProduct from './pages/AddProduct';
 import Product from './components/Product';
 import { Route, Routes } from 'react-router-dom';
 import Layouts from './components/layouts/Layouts';
+import FavouriteBooks from './pages/FavouriteBooks';
 
 function App() {
   return (
@@ -16,6 +17,8 @@ function App() {
           <Route path="/contact" element={<Contact />}></Route>
           <Route path="/product" element={<Product />}></Route>
           <Route path="/product/add" element={<AddProduct />}></Route>
+          <Route path="/product/favourites" element={<FavouriteBooks />}></Route>
+
         </Routes>
       </Layouts>
 
