@@ -1,9 +1,24 @@
 import style from './product_Item.module.css';
 import Wrapper from '../layouts/Wrapper';
+import FavouriteContext from '../store/ContextFavourite';
+import { useContext } from 'react';
+
 
 
 function Product_Item(props) {
-    return <li key={props.item.id}>
+    const favouriteContext = useContext(FavouriteContext);
+
+    const isfavourite = favouriteContext.chectUserFavourite(props.item._id);
+
+    const togglefavourite = () => {
+        if (isfavourite) {
+            favouriteContext.removeUserFavourite(props.item._id);
+        } else {
+            favouriteContext.addUserFavourite({ ...props.item });
+        }
+    }
+
+    return <li key={props.item._id}>
         <Wrapper>
             <div className={style.grid}>
                 <div>
@@ -16,6 +31,9 @@ function Product_Item(props) {
                     <p>Description:{props.item.description}</p>
                     <h4>Price:{props.item.price}/-</h4>
                     <button>Buy Now</button>
+                    <div>
+                        <button className={isfavourite?style.heartFvrt:style.heartUnfvrt} onClick={togglefavourite}></button>
+                    </div>
 
                 </div>
             </div>
