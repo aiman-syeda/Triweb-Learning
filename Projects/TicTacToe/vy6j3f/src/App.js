@@ -1,15 +1,19 @@
 import { useState } from "react";
+import "./styles.css";
+import GameState from "./components/GameState";
+import GameOver from "./components/GameOver";
+import Reset from "./components/Reset";
+import CalculateWinner from "./components/CalculateWinner";
 
 function Square({ value, onSquareClick }) {
   return <button className="square" onClick={onSquareClick}>{value}</button>
 
 }
 
-
-function Board({ xIsNext, squares, onPlay }) {
+function Board({ xIsNext, squares, onPlay, setGameState }) {
 
   function handleClick(i) {
-    if (squares[i] || calculateWinner(squares)) {
+    if (squares[i] || CalculateWinner(squares)) {
       return;
     }
 
@@ -21,18 +25,34 @@ function Board({ xIsNext, squares, onPlay }) {
     }
     onPlay(nextSquares);
   }
-  let message;
-  const winner = calculateWinner(squares);
-
+  /*let message;
+  const winner = CalculateWinner(squares);
   if (winner) {
     message = 'Winner: ' + winner;
   } else {
     message = "Next player " + (xIsNext ? "X" : "O");
+  }*/
+
+  const onallSquares = squares.every((square) => square != null);
+  if (onallSquares) {
+    setGameState(GameState.draw);
   }
+
+  const winner = CalculateWinner(squares);
+  if (winner === 'X') {
+    setGameState(GameState.playerXwins);
+  }
+  else if (winner === 'O') {
+    setGameState(GameState.playerOwins);
+  }
+
+
+
 
   return (
     <>
-      <div className="status">{message}</div>
+      <h1>Tic Tac Toe</h1>
+      {/*<div className="status">{message}</div>*/}
       <div className="board-row">
         <Square value={squares[0]} onSquareClick={() => handleClick(0)} />
         <Square value={squares[1]} onSquareClick={() => handleClick(1)} />
@@ -59,6 +79,7 @@ export default function Game() {
   const [currentMove, setCurrentMove] = useState(0);
   const xIsNext = currentMove % 2 === 0;
   const currentSquares = history[currentMove];
+  const [gamestate, setGameState] = useState(GameState.inProgress);
 
   function handlePlay(nextSquares) {
 
@@ -66,6 +87,8 @@ export default function Game() {
     setHistory(nextHistory);
     setCurrentMove(nextHistory.length - 1);
   }
+
+
 
   function jumpTo(nextMove) {
     setCurrentMove(nextMove);
@@ -88,7 +111,9 @@ export default function Game() {
   return (
     <div className="game">
       <div className="game-board">
-        <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
+        <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} setGameState={setGameState} />
+        <GameOver gamestate={gamestate} />
+        <Reset />
       </div>
       <div className="game-info">
         <ol>{moves}</ol>
@@ -99,22 +124,7 @@ export default function Game() {
 
 
 
-function calculateWinner(squares) {
-  const lines = [
-    [0, 1, 2],
-    [3, 4, 5],
-    [6, 7, 8],
-    [0, 3, 6],
-    [1, 4, 7],
-    [2, 5, 8],
-    [0, 4, 8],
-    [2, 4, 6]
-  ];
-  for (let i = 0; i < lines.length; i++) {
-    const [a, b, c] = lines[i];
-    if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
-      return squares[a];
-    }
-  }
-  return null;
-}
+
+
+
+
