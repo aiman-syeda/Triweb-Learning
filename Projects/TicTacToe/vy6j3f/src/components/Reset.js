@@ -7,7 +7,7 @@ function Reset({gamestate, onReset}) {
       return;
     }
     
-    return ( <button className="reset-btn" onClick={onReset}>Reset</button>)
+    return ( <button className="reset-btn" onClick={onReset}>Play Again</button>)
       
   }
 
