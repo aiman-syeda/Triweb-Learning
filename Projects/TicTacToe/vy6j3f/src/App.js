@@ -88,7 +88,10 @@ export default function Game() {
     setCurrentMove(nextHistory.length - 1);
   }
 
-
+  const handleReset = () => {
+    setHistory([Array(9).fill(null)]);
+    setCurrentMove(0);
+  }
 
   function jumpTo(nextMove) {
     setCurrentMove(nextMove);
@@ -113,7 +116,7 @@ export default function Game() {
       <div className="game-board">
         <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} setGameState={setGameState} />
         <GameOver gamestate={gamestate} />
-        <Reset />
+        <Reset gamestate={gamestate} onReset={handleReset} />
       </div>
       <div className="game-info">
         <ol>{moves}</ol>
