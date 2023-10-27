@@ -1,0 +1,13 @@
+Create Your own React Portfolio
+
+step1: Create a react app
+      -run this command in the terminal: npx create-react-app Portfolio
+step2: Go to the directory
+      -run this from your terminal: cd Portfolio
+step3: Run this command every time you want to run server
+      - npm start
+step4: Make some changes in the autodownloaded files, filter them out and keep only 
+       what you need for example App.js and index.js and clean these files too.
+       Also remove unnecessary public files except index.html and you may need to clean 
+       this file as per your requirements like removing all the comments, replacing content
+       and title of your choice.
