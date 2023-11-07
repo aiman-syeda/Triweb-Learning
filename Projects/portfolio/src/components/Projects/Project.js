@@ -14,22 +14,22 @@ const Project = () => {
         infinite: true,
         speed: 500,
         slidesToShow: 2,
-        slidesToScroll: 1
+        slidesToScroll: 1,
       };
     return (
-        <div className='w-3/4 m-auto'>
+        <div className='w-3/4 m-auto mt-[105px]'>
           
-            <div>
-                <h1 className='text-3xl text-center font-semibold'>Projects</h1>
-                <p className='mt-12 font-extralight justify-center'>Here are some of my projects.These projects highlight my expertise in web development and programming,
+            <div className='mb-[80px]'>
+                <h1 className='text-3xl text-center font-semibold '>Projects</h1>
+                <p className='mt-[80px] mb-[80px] font-extralight justify-center'>Here are some of my projects.These projects highlight my expertise in web development and programming,
                      covering a range of functionalities and applications.</p>
             </div>
 
 
-            <div className='mt-20'>
+            <div className='mt-20 mb-[80px]'>
                 <Slider {...settings}>
                 {Projects.map((item) =>
-                    <div className='h-[300px] bg-light text-white rounded-xl m-4'>
+                    <div className='h-[300px] bg-light text-white rounded-xl m-4 transition-all duration:3 hover:scale-110 border-white'>
 
                         <div className='text-center justify-center items-center text-base mt-4 text-xl'>
                             <p>{item.title}</p>
