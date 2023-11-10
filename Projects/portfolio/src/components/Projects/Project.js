@@ -21,8 +21,8 @@ const Project = () => {
           
             <div className='mb-[80px]'>
                 <h1 className='text-3xl text-center font-semibold '>Projects</h1>
-                <p className='mt-[80px] mb-[80px] font-extralight justify-center'>Here are some of my projects.These projects highlight my expertise in web development and programming,
-                     covering a range of functionalities and applications.</p>
+                <p className='mt-[80px] mb-[80px] font-light justify-center text-lg'>Here are some of my projects.These projects highlight my expertise in web development and programming,
+                     covering a range of functionalities and applications.These experiences have not only sharpened my development abilities but also allowed me to explore different aspects of web development.</p>
             </div>
 
 
