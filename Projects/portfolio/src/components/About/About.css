@@ -47,11 +47,12 @@
     padding: 1.5rem 2rem;
     border-radius: 0.5rem;
     background: rgb(37, 76, 95);
+    transition: all 1s;
 }
 
 
 .skillBar:hover {
-    border: 2px solid #5893a4;
+    transform: scale(1.15);
 }
 
 
