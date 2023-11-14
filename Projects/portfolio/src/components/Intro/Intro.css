@@ -1,10 +1,12 @@
 #intro {
     height: calc(100vh - 4rem);
-    width: 100vw;
+    width: 75%;
     max-width: 85rem;
     margin: 0 auto;
     overflow: hidden;
     position: relative;
+    display: flex;
+    flex-direction: row;
 }
 
 .bg {
@@ -67,6 +69,14 @@
     object-fit: cover;
     margin: 0 0.35rem;
     height: 1.4rem;
+}
+
+.introimg {
+    object-fit:cover;
+    height:100vw;
+    width: 100vw;
+    margin: 200px 60px;
+    
 }
 
 @media screen and (max-width:840px) {
