@@ -4,6 +4,7 @@ import About from "./components/About/About";
 import Project from "./components/Projects/Project";
 import Skill from "./components/Skills/Skill";
 import Contact from "./components/Contact/Contact";
+import Footer from "./components/Footer/Footer";
 
 
 function App() {
@@ -15,8 +16,11 @@ function App() {
       <Project />
       <Skill />
       <Contact />
+      <Footer />
     </div>
   );
 }
 
 export default App;
+
+
