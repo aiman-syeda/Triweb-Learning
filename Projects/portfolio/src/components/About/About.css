@@ -1,4 +1,4 @@
-#skills {
+#about-section {
     height: calc(100vh - 4rem);
     overflow: hidden;
     width: 100vw;
@@ -34,36 +34,36 @@
     text-align: justify;
 }
 
-.skillBars {
+.educationBars {
     margin: 1.5rem;
     width:  100vw;
     max-width: 80%;
     text-align: left;
 }
 
-.skillBar {
+.educationBar {
     display: flex;
     margin: 1rem;
     padding: 1.5rem 2rem;
     border-radius: 0.5rem;
-    background: rgb(37, 76, 95);
+    background: #34495E;
     transition: all 1s;
 }
 
 
-.skillBar:hover {
+.educationBar:hover {
     transform: scale(1.15);
 }
 
 
-.skillBarImg {
+.eduBarImg {
     object-fit: cover;
     height: 3rem;
     width: 3rem;
     margin-right: 2rem;
 }
 
-.skillBarText>p {
+.eduBarText>p {
     font-size: 0.9rem;
     font-weight: 200;
 }
