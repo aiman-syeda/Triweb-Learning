@@ -1,5 +1,7 @@
 Create Your own React Portfolio
 
+# Basic Set up:
+
 step1: Create a react app
       -run this command in the terminal: npx create-react-app Portfolio
 step2: Go to the directory
@@ -11,3 +13,13 @@ step4: Make some changes in the autodownloaded files, filter them out and keep o
        Also remove unnecessary public files except index.html and you may need to clean 
        this file as per your requirements like removing all the comments, replacing content
        and title of your choice.
+
+Start First with Navigation bar 
+
+step1: Create Components folder in src
+step2: Create a file for navbar and a stylesheet for the same
+step3: Use react-scroll to navigate through the links on the home page or landing page.
+
+To use different fonts go to "GoogleFonts" select poppins and copy code to import font-family you choosed.
+And this link to the html file in the public folder and also add font-family:'Poppins' , sans-serif in the styles.css
+file for your website.
