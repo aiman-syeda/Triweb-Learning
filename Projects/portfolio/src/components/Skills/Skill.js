@@ -146,22 +146,22 @@ const Data = [
         title: 'C-Programming'
     },
     {
-        genre: 'Development Tools and Practices',
+        genre: 'Development Tools/Practices',
         image: git,
         title: 'Git'
     },
     {
-        genre: 'Development Tools and Practices',
+        genre: 'Development Tools/Practices',
         image: jira,
         title: 'Jira'
     },
     {
-        genre: 'Development Tools and Practices',
+        genre: 'Development Tools/Practices',
         image: sdlc,
         title: 'SDLC'
     },
     {
-        genre: 'Development Tools and Practices',
+        genre: 'Development Tools/Practices',
         image: vs,
         title: 'VS-Code'
     }
