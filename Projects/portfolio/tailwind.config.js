@@ -21,7 +21,8 @@ module.exports = {
       },
       margin: {
           '105px': '105px',
-          '80px' : '80px'
+          '80px' : '80px',
+          '95%'  : '95%'
       }
     },
   },
