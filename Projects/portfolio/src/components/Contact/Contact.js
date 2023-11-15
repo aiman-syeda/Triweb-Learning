@@ -2,10 +2,14 @@ import React, { useRef } from 'react';
 import { firestore } from '../../Firebase';
 import { addDoc, collection } from '@firebase/firestore';
 import ReactDOM from 'react-dom/client';
-
+import scrollimg from '../../assets/top-arrow (1).png';
 
 
 const Contact = () => {
+
+    const toTop = () => {
+        window.scrollTo(0, 0);
+    }
 
     const messageRef = useRef();
     const emailRef = useRef();
@@ -31,7 +35,7 @@ const Contact = () => {
                     <div className='flex flex-col justify-center items-center'>
                         <h1 className='mt-96 mb-8 text-center font-semibold text-4xl'>Thanks for Contacting</h1>
                         <p className='text-center text-xl'>You are form is submitted successfully! </p>
-                        <button className="m-8 w-32 h-16 bg-white text-black p-3  rounded-lg"><a href='http://localhost:3000/'>Return</a></button>
+                        <button className="m-8 w-32 h-16 bg-white text-black p-3  rounded-lg"><a href='https://triweb-learning.vercel.app/'>Return</a></button>
                     </div>)
             }
 
@@ -51,6 +55,7 @@ const Contact = () => {
                 <textarea required className='bg-light w-full max-w-2xl p-2 rounded-lg m-2' name='message' rows='5' ref={messageRef} placeholder='Your Message'></textarea>
                 <button className='bg-white text-black p-3  rounded-lg m-8' type='submit' value='send'>Submit</button>
             </form>
+            <button className='ml-[95%] mb-4 w-16 h-12' onClick={toTop}><img src={scrollimg} alt='' /></button>
         </div>
     )
 }
