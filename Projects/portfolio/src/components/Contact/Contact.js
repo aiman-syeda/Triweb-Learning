@@ -33,9 +33,9 @@ const Contact = () => {
                 const root = ReactDOM.createRoot(container);
                 root.render(
                     <div className='flex flex-col justify-center items-center'>
-                        <h1 className='mt-96 mb-8 text-center font-semibold text-4xl'>Thanks for Contacting</h1>
-                        <p className='text-center text-xl'>You are form is submitted successfully! </p>
-                        <button className="m-8 w-32 h-16 bg-white text-black p-3  rounded-lg"><a href='https://triweb-learning.vercel.app/'>Return</a></button>
+                        <h1 className='mt-96 mb-8 text-center font-semibold text-4xl'>Thanks for Contacting.</h1>
+                        <p className='text-center text-xl'>Your form has been submitted successfully! </p>
+                        <button className="m-8 w-32 h-16 bg-white text-black p-3  rounded-lg"><a href='https://syeda-aiman.vercel.app/'>Return</a></button>
                     </div>)
             }
 
